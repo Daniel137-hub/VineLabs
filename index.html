@@ -123,36 +123,44 @@
     </section>
 
     <section class="contact" id="contact">
-      <div class="contact__form" id="contact">
-            <h2 class="contact__header">Boook your project</h2>
-            <h3>Your Name <span class="required">*</span></h3>
-            <!-- <div class="hint">Enter Your name </div> -->
-            <input type="text" id="name" placeholder="Name">
-
-            <h3>Your E-mail <span class="required">*</span></h3>
-            <!-- <div class="hint">Enter your Email </div> -->
-            <input type="text" id="email" placeholder="Email">
-
-            <h3>Project Description<span class="required">*</span></h3>
-            <textarea id="details" placeholder="Include project description, details, requirements or goals ....."></textarea>
-
-            <h3>Target Date <span class="required">*</span></h3>
-            <div class="hint">Select when you need the project to be completed </div>
-            <select id="date">
-              <option value="">Please select</option>
-              <option>1 Week</option>
-              <option>2 Weeks</option>
-              <option>3 Weeks</option>
-              <option>1 Month</option>
-              <option>More than 1 Month</option>
-            </select>
-
-            <h3>Project Budget<span class="required">*</span></h3>
-            <div class="hint">Minimum project rate is $500 (USD)</div>
-            <input type="number" id="budget" placeholder="$ Enter amount">
-
-            <button>Send Message</button>
-      </div>
+      <div class="container">
+      <h2 class="contact__header">Boook your project</h2>
+      <form action="https://formspree.io/f/xgopayvq" method="post">
+        <div class="form-group">
+          <label for="Name">Name *</label>
+          <input type="text" id="name" name="Name" required />
+        </div>
+        <div class="form-group">
+          <label for="Email">Email *</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="Description">Project Description *</label>
+          <textarea id="description" name="Project description" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="Date">Target Date *</label>
+          <div class="hint">Select when you need the project to be completed </div>
+          <select id="date" name="Date" required>
+            <option value="">Please select</option>
+            <option>1 Week</option>
+            <option>2 Weeks</option>
+            <option>3 Weeks</option>
+            <option>1 Month</option>
+            <option>More than 1 Month</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="Budget">Project Budget *</label>
+          <div class="hint">Minimum project rate is $500 (USD)</div>
+          <div class="currency">
+            <span class="currency__symbol">$</span>
+            <input type="number" id="budget1" placeholder="Enter amount" name="Project budget (USD)" required />
+          </div>
+        </div>
+        <input type="submit" value="Send Message" />
+      </form>
+    </div>
     </section>
 
     <footer>
