@@ -479,7 +479,7 @@ footer {
 }
 
 .footer__bar a {
-  color: var(--text-light);
+  /*color: var(--text-light);*/
 }
 
 @media (width > 540px) {
